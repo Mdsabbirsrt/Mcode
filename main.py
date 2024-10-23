@@ -114,6 +114,7 @@ def StripeChargebot(ccx):
 }
 
 	req = requests.post('https://www.happyscribe.com/api/iv1/confirm_payment', cookies=cookies, headers=headers, json=json_data)
+		print(req.json()['error'])
 	if 'Retry later' in req.text:
 		ms = 'risk'
 		return ms
