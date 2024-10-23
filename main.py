@@ -135,12 +135,19 @@ def StripeChargebot(ccx):
 			return req.json()
 @bot.message_handler(commands=["start"])
 def start(message):
-	bot.reply_to(message,'''- Welcome Dear ♡!
-You are Subscribed Dar Bot 🌿!
-Send Me The Combo Visa File To Check it
+	bot.reply_to(message,'''- Dar Checker Welcome 
 
-Gate - Stripr Charge 15$ ViP 🌿.
-Programmer - @dar666787''')
+Telegram channels: @dar666787
+𝐆𝐚𝐭𝐞𝐰𝐚𝐲: Stripe 
+Notice : Enjoy  Fast joine
+
+Checker Limited : 10 txt number
+
+𝗜𝗻𝗳𝗼: Bot start 23oct
+𝐈𝐬𝐬𝐮𝐞𝐫: 
+𝐂𝐨𝐮𝐧𝐭𝐫𝐲: UNITED STATES 🇺🇸
+
+Bot by: @dar666787''')
 @bot.message_handler(content_types=["document"])
 def main(message):
 	dd = 0
@@ -309,5 +316,7 @@ Programeer - @dar666787 🧸 ''', reply_markup=mes)
 					time.sleep(15)
 	except Exception as eo:
 		print(eo)
+		
+		
 print("Bot Start")
 bot.polling()
